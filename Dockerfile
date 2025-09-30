@@ -32,6 +32,9 @@ FROM nginx:alpine AS production
 # System Dependencies
 RUN apk add --no-cache nodejs npm supervisor
 
+# Create supervisor log directory
+RUN mkdir -p /var/log/supervisor
+
 # Nginx Konfiguration kopieren
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
