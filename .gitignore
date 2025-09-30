@@ -1,0 +1,45 @@
+# Ignoriere Node.js Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignoriere Build Ausgaben
+build/
+dist/
+*.tgz
+
+# Ignoriere Environment Files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignoriere IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignoriere OS Files
+.DS_Store
+Thumbs.db
+
+# Ignoriere Docker Development Files
+docker-compose.override.yml
+
+# Ignoriere Test Coverage
+coverage/
+
+# Ignoriere Logs
+logs/
+*.log
+
+# Ignoriere Backup Files
+*.backup
+*.tar.gz
+
+# Ignoriere Temporary Files
+tmp/
+temp/

@@ -1,0 +1,34 @@
+# Ignore everything by default
+*
+
+# Allow specific files and directories
+!README.md
+!package.json
+!package-lock.json
+!Dockerfile*
+!docker-compose.yml
+!Makefile
+!.github/
+!.github/**
+!src/
+!src/**
+!public/
+!public/**
+!docker/
+!docker/**
+!*.js
+!*.ts
+!*.tsx
+!*.json
+!*.yml
+!*.yaml
+!*.md
+!*.sh
+!*.conf
+
+# Re-ignore specific patterns
+node_modules/
+build/
+dist/
+coverage/
+*.log
