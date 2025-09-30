@@ -1,34 +1,22 @@
-# Ignore everything by default
-*
-
-# Allow specific files and directories
-!README.md
-!package.json
-!package-lock.json
-!Dockerfile*
-!docker-compose.yml
-!Makefile
-!.github/
-!.github/**
-!src/
-!src/**
-!public/
-!public/**
-!docker/
-!docker/**
-!*.js
-!*.ts
-!*.tsx
-!*.json
-!*.yml
-!*.yaml
-!*.md
-!*.sh
-!*.conf
-
-# Re-ignore specific patterns
+# Ignore node_modules and build artifacts
 node_modules/
 build/
 dist/
 coverage/
 *.log
+
+# Ignore git and IDE files
+.git/
+.vscode/
+.idea/
+
+# Ignore temporary files
+tmp/
+temp/
+*.tmp
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Keep everything else (especially backend/ and frontend/ directories)
