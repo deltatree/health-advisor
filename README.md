@@ -82,6 +82,21 @@ docker run -d -p 80:80 --name vr-starterkonto ghcr.io/DEIN-USERNAME/vr-starterko
 - `v1.0.0` - Semantic Versioning
 - `sha-abc123` - Spezifische Commits
 
+### ⚙️ GitHub Actions Setup
+
+**Zwei Workflows verfügbar:**
+1. **docker-build-push.yml** - Vollversion mit Security-Scanning
+2. **docker-build-basic.yml** - Basisversion ohne spezielle Berechtigungen
+
+**Repository Settings:**
+```bash
+# Erforderliche Berechtigungen aktivieren:
+Settings → Actions → General → Workflow permissions
+→ "Read and write permissions" auswählen
+```
+
+Siehe [.github/README.md](.github/README.md) für detaillierte Konfiguration.
+
 ## 🛠 Entwicklung
 
 ### Make Commands
