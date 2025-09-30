@@ -86,7 +86,6 @@ jobs:
         run: |
           cd backend
           npm test
-        continue-on-error: true
 
       - name: Start Backend for Integration Tests
         run: |
@@ -110,7 +109,6 @@ jobs:
         run: |
           cd frontend
           npm test -- --coverage --watchAll=false
-        continue-on-error: true
 
   # Docker Build and Push
   docker-build-push:
