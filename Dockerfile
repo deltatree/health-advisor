@@ -2,7 +2,7 @@
 # Kombiniert React Frontend und Node.js Backend in einem Container
 
 # Stage 1: Frontend Build
-FROM node:18-alpine AS frontend-builder
+FROM node:22.23.4-alpine3.24 AS frontend-builder
 
 WORKDIR /app/frontend
 
@@ -15,7 +15,7 @@ COPY frontend/ ./
 RUN npm run build
 
 # Stage 2: Backend Setup
-FROM node:18-alpine AS backend-builder
+FROM node:22.23.4-alpine3.24 AS backend-builder
 
 WORKDIR /app/backend
 
@@ -27,10 +27,11 @@ RUN npm ci --only=production
 COPY backend/ ./
 
 # Stage 3: Production Image mit Nginx
-FROM nginx:alpine AS production
+FROM nginx:1.31.8-alpine3.24 AS production
 
 # System Dependencies
-RUN apk add --no-cache nodejs npm supervisor
+RUN apk add --no-cache supervisor libstdc++
+COPY --from=node:22.23.4-alpine3.24 /usr/local/bin/node /usr/local/bin/node
 
 # Create supervisor log directory
 RUN mkdir -p /var/log/supervisor
